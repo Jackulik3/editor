@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>EDITOR</title>
+<!--  codemirror-->
+  <script src= "codemirror/lib/codemirror.js"></script>
+  <link rel="stylesheet" href="codemirror/lib/codemirror.css">
+<!--  mode-->
+  <script src= "codemirror/mode/javascript/javascript.js"></script>
+  <script src= "codemirror/mode/xml/xml.js"></script>
+  <!--  <script src= "codemirror/mode/python/python.js"></script>-->
+<!--  theme-->
+  <link rel="stylesheet" href="codemirror/theme/dracula.css">
+  <link rel="stylesheet" href="codemirror/theme/midnight.css">
+  <link rel="stylesheet" href="codemirror/theme/abcdef.css">
+<!--  addon-->
+  <script src="codemirror/addon/hint/show-hint.js"></script>
+  <script src="codemirror/addon/hint/javascript-hint.js"></script>
+  <link rel="stylesheet" href="codemirror/addon/hint/show-hint.css">
+  <link rel="stylesheet" href="codemirror/addon/lint/lint.css">
+  <script src= "codemirror/addon/lint/javascript-lint.js"></script>
+  <script src="codemirror/addon/lint/lint.js"></script>
+  <script src="codemirror/addon/lint/javascript-lint.js"></script>
+  <script src="codemirror/addon/lint/html-lint.js"></script>
+  <script src="codemirror/addon/edit/closetag.js"></script>
+  <link rel="stylesheet" href="codemirror/addon/lint/html-lint.js">
+<!--  js hint-->
+  <script src="https://unpkg.com/jshint@2.13.2/dist/jshint.js"></script>
+
+  <script src='/socket.io/socket.io.js'></script>
+
+</head>
+<body>
+<div>
+  <textarea id="editor"></textarea>
+</div>
+<script src='./client.js'></script>
+<p>Mode</p>
+<button type="button" id="js" onclick="changeTOjs()">JS</button>
+<button type="button" id="ptext" onclick="changeTOtext()">TEXT</button>
+<button type="button" id="python" onclick="changeTOhtml()">HTML</button>
+<br>
+<p>Theme</p>
+<button type="button" id="dracula" onclick="changeTOdracula()">dracula</button>
+<button type="button" id="midnight" onclick="changeTOmidnight()">midnight</button>
+<button type="button" id="abcdef" onclick="changeTOabcdef()">abcdef</button>
+<br>
+<p>Download TEXT:</p>
+<input value='download' type='button'
+       onclick='download()' />
+</body>
+</html>
